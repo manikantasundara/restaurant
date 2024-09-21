@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijayasri Restaurant</title>
+    <style>
+        /* Base styles for the body */
+        body {
+            background-color: antiquewhite;
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the background image */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white; /* Adjust text color for better readability */
+        }
+
+        h4 {
+            color: blueviolet;
+            margin: 10px 0;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 36px; /* Adjust font size as needed */
+            background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #cc00cc);
+            background-size: 400% 400%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradientAnimation 2s ease infinite; /* Faster animation */
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+
+        /* Responsive adjustments for smaller devices */
+        @media (max-width: 600px) {
+            h4 {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            h4 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h4>Welcome to</h4>
+    <h2>Vijayasri Restaurant</h2>
+
+    <a href="menu.html">
+        <p>Click here to check menu</p>
+    </a>
+</body>
+</html>
