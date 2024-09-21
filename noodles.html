@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noodles/Friedrice Menu</title>
+    <style>
+        /* Styling the body */
+        body {
+            background-color: blanchedalmond;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: block; /* Removing flexbox */
+            min-height: 100vh; /* Allow the content to grow */
+        }
+
+        /* Styling for the menu title */
+        h2 {
+            text-align: center;
+            color: crimson;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Styling the menu container */
+        .menu {
+            text-align: left;
+            font-size: 20px;
+            line-height: 2;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #8B4513;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto; /* Center the menu */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Adding hover effect on the menu container */
+        .menu:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Styling for each menu item */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            transition: color 0.3s ease;
+        }
+
+        /* Last menu item has no border */
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Hover effect for menu items */
+        .menu-item:hover {
+            color: #8B4513;
+        }
+
+        /* Styling for the item name */
+        .menu-item span:first-child {
+            font-weight: bold;
+        }
+
+        /* Responsive styles for mobile screens */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 28px;
+            }
+
+            .menu {
+                font-size: 18px;
+            }
+        }
+
+        /* Responsive styles for tablets */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            h2 {
+                font-size: 32px;
+            }
+
+            .menu {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Noodles/Friedrice</h2>
+    
+    <div class="menu">
+        <div class="menu-item">
+            <span>Chicken Noodles</span>
+            <span>110/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Fried Rice Sona</span>
+            <span>110/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Egg Friedrice</span>
+            <span>90/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Mughalai Friedrice Mini</span>
+            <span>150/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Mughalai Friedrice Full</span>
+            <span>250/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Mixed Friedrice</span>
+            <span>380/-</span>
+        </div>
+        <div class="menu-item">
+            <span>SP Mutton Friedrice</span>
+            <span>380/-</span>
+        </div>
+        <div class="menu-item">
+            <span>SP Chicken Friedrice</span>
+            <span>280/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Egg Friedrice Basmati</span>
+            <span>160/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Sp Prawns Friedrice</span>
+            <span>380/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Prawns Mixed Friedrice</span>
+            <span>320/-</span>
+        </div>
+    </div> 
+    <h2>Veg Friedrice</h2>   
+    <div class="menu">   
+        <div class="menu-item">
+            <span>Veg Friedrice</span>
+            <span>140/-</span>
+        </div>
+        <div class="menu-item">
+            <span>SP Veg Friedrice With Panneer Curry</span>
+            <span>300/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Veg Friedrice With Kaju Tomato Curry</span>
+            <span>280/-</span>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biryani Menu</title>
+    <style>
+        /* Styling the body */
+        body {
+            background-color: blanchedalmond;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center; /* Ensure headings are centered */
+        }
+
+        /* Styling for the menu title */
+        h2 {
+            color: crimson;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Styling the menu container */
+        .menu {
+            text-align: left;
+            font-size: 20px;
+            line-height: 2;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #8B4513;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Adding hover effect on the menu container */
+        .menu:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Styling for each menu item */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            transition: color 0.3s ease;
+        }
+
+        /* Last menu item has no border */
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Hover effect for menu items */
+        .menu-item:hover {
+            color: #8B4513;
+        }
+
+        /* Hover effect for menu item prices */
+        .menu-item span:last-child:hover {
+            color: #8B4513;
+            font-weight: bold;
+        }
+
+        /* Styling for the item name */
+        .menu-item span:first-child {
+            font-weight: bold;
+        }
+
+        /* Responsive styles for mobile screens */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 28px;
+            }
+
+            .menu {
+                font-size: 18px;
+            }
+        }
+
+        /* Responsive styles for tablets */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            h2 {
+                font-size: 32px;
+            }
+
+            .menu {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Biryani Menu</h2>
+    
+    <div class="menu">
+        <div class="menu-item">
+            <span>Chicken Biryani sona</span>
+            <span>110/-</span>
+        </div>
+        <div class="menu-item">
+            <span>SP Chicken Biryani</span>
+            <span>280/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken FryPiece Mini</span>
+            <span>140/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Frypiece Full</span>
+            <span>220/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Mughalai Biryani Mini</span>
+            <span>150/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Mughalai Biryani Full</span>
+            <span>250/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Mixed Biryani</span>
+            <span>380/-</span>
+        </div>
+        <div class="menu-item">
+            <span>SP Mutton Biryani</span>
+            <span>380/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Mutton Mixed Biryani</span>
+            <span>320/-</span>
+        </div>
+        <div class="menu-item">
+            <span>SP Prawns Biryani</span>
+            <span>320/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Prawns Mixed Biryani</span>
+            <span>300/-</span>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Categories</title>
+    <style>
+        /* Base styling for the body */
+        body {
+            background-color: blanchedalmond;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Styling for each menu item */
+        h2 {
+            margin: 20px 0;
+            padding: 15px 30px;
+            border: 2px solid #8B4513; /* Brown border */
+            border-radius: 10px;
+            width: 80%;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fffaf0; /* Light background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* Hover effect for menu items */
+        h2:hover {
+            background-color: #8B4513; /* Brown color on hover */
+            color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        }
+
+        /* Link styling */
+        a {
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+        }
+
+        /* Styling for smaller devices */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 18px;
+                width: 90%;
+                padding: 12px 20px;
+            }
+        }
+
+        /* Styling for tablets and medium-sized devices */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            h2 {
+                font-size: 22px;
+                width: 85%;
+                padding: 14px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="starters.html">
+        <h2>Starter's</h2>
+    </a>
+    <a href="biryanis.html">
+        <h2>Biryani's</h2>
+    </a>
+    <a href="noodles.html">
+        <h2>Noodles/Friedrice</h2>
+    </a>
+</body>
+</html>

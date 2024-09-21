@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starters Menu</title>
+    <style>
+        /* Styling the body */
+        body {
+            background-color: blanchedalmond;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: block; /* Remove flexbox layout */
+            min-height: 100vh; /* Allow content to grow */
+        }
+
+        /* Styling for the menu title */
+        h2 {
+            text-align: center;
+            color: crimson;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Styling the menu container */
+        .menu {
+            text-align: left;
+            font-size: 20px;
+            line-height: 2;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #8B4513;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto; /* Center the menu */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Adding hover effect on the menu container */
+        .menu:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Styling for each menu item */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            transition: color 0.3s ease;
+        }
+
+        /* Last menu item has no border */
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Hover effect for menu items */
+        .menu-item:hover {
+            color: #8B4513;
+        }
+
+        /* Styling for the item name */
+        .menu-item span:first-child {
+            font-weight: bold;
+        }
+
+        /* Responsive styles for mobile screens */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 28px;
+            }
+
+            .menu {
+                font-size: 18px;
+            }
+        }
+
+        /* Responsive styles for tablets */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            h2 {
+                font-size: 32px;
+            }
+
+            .menu {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Starters</h2>
+    
+    <div class="menu">
+        <div class="menu-item">
+            <span>Chicken 555</span>
+            <span>240/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chilli Chicken</span>
+            <span>240/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Lollypop</span>
+            <span>240/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Lemon Chicken</span>
+            <span>280/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Honkong Chicken</span>
+            <span>280/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken 65</span>
+            <span>240/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Kaju Balls</span>
+            <span>300/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Manchuria</span>
+            <span>280/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Dragon Chicken</span>
+            <span>300/-</span>
+        </div>
+    </div>
+    <h2>Veg Starters</h2>
+    
+    <div class="menu">
+        <div class="menu-item">
+            <span>Panneer 65</span>
+            <span>220/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Chilli Panneer</span>
+            <span>220/-</span>
+        </div>
+        <div class="menu-item">
+            <span>Panneer 555</span>
+            <span>250/-</span>
+        </div>
+    </div>    
+
+</body>
+</html>
