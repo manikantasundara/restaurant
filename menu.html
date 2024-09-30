@@ -7,8 +7,8 @@
     <style>
         /* Base styling for the body */
         body {
-            background-color: blanchedalmond;
-            font-family: Arial, sans-serif;
+            background-color: #f9f2e7; /* Vintage paper-like background */
+            font-family: 'Georgia', serif; /* Elegant font for traditional feel */
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,25 +17,46 @@
             align-items: center;
             height: 100vh;
             text-align: center;
+            color: #3e2723; /* Dark brown text */
         }
 
         /* Styling for each menu item */
         h2 {
             margin: 20px 0;
             padding: 15px 30px;
-            border: 2px solid #8B4513; /* Brown border */
-            border-radius: 10px;
+            border: 3px solid #8B4513; /* Brown border */
+            border-radius: 15px;
             width: 80%;
             color: #333;
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-            background-color: #fffaf0; /* Light background */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            background-color: #fff9e6; /* Soft paper color */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
+            position: relative;
+            overflow: hidden; /* To contain the shadow effects */
+        }
+
+        /* Adding subtle decorative elements */
+        h2::before, h2::after {
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 100%;
+            background: rgba(139, 69, 19, 0.3);
+            top: -10px;
+            left: 0;
+            border-radius: 10px;
+            z-index: 0;
+        }
+
+        h2::after {
+            bottom: -10px;
+            top: auto;
         }
 
         /* Hover effect for menu items */
         h2:hover {
-            background-color: #8B4513; /* Brown color on hover */
+            background-color: #8B4513; /* Dark brown on hover */
             color: white;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
         }
@@ -45,12 +66,14 @@
             text-decoration: none;
             color: inherit;
             width: 100%;
+            position: relative; /* Position for the h2 hover effect */
+            z-index: 1; /* Ensure links are on top of decorative elements */
         }
 
         /* Styling for smaller devices */
         @media (max-width: 600px) {
             h2 {
-                font-size: 18px;
+                font-size: 20px;
                 width: 90%;
                 padding: 12px 20px;
             }
@@ -59,7 +82,7 @@
         /* Styling for tablets and medium-sized devices */
         @media (min-width: 601px) and (max-width: 1024px) {
             h2 {
-                font-size: 22px;
+                font-size: 24px;
                 width: 85%;
                 padding: 14px 25px;
             }
@@ -73,7 +96,7 @@
     <a href="biryanis.html">
         <h2>Biryani's</h2>
     </a>
-    <a href="noodles.html">
+    <a href="nf.html">
         <h2>Noodles/Friedrice</h2>
     </a>
 </body>
