@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vijayasri Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
     <style>
         /* Base styles for the body */
         body {
-            background-color: #f9f2e7; /* Vintage paper-like background */
+            background: linear-gradient(45deg, #FFB3BA, #FFDFBA, #FFFFBA, #BAFFC9, #BAE1FF, #FFBAF3); /* Light Holi colors gradient */
+            background-size: 200% 200%; /* Make the gradient animated */
+            animation: gradientAnimation 10s ease infinite; /* Animation for the gradient */
             font-family: 'Georgia', serif; /* Consistent serif font */
             margin: 0;
             padding: 0;
@@ -20,16 +23,26 @@
             text-align: center;
         }
 
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
         /* Navigation Bar */
         nav {
             width: 100%;
-            background-color: #8b4513; /* Burnt orange for consistency */
+            background-color: rgba(139, 69, 19, 0.8); /* Burnt orange with transparency for consistency */
             padding: 15px 0;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 20px rgba(255, 165, 0, 0.5); /* Warm glow effect */
+            border-bottom: 4px solid #ffcc80; /* Light orange bottom border */
         }
 
         nav ul {
@@ -58,39 +71,55 @@
 
         /* Header Section */
         .header {
-            margin-top: 120px; /* Prevent overlap with fixed nav */
-            padding: 20px;
+            margin-top: 100px; /* Keep margin for nav bar */
+            padding: 0; /* Remove padding to fit the image size exactly */
+            width: 800px; /* Set to match image width */
+            height: 300px; /* Set to match image height */
+            background-color: transparent; /* Remove any background color */
+            position: relative;
+            border-radius: 10px; /* Keep border radius for styling */
+            box-shadow: none; /* Remove box-shadow for no color */
+            color: #fff; /* Keep text color white for contrast */
+            text-align: center; /* Center text alignment */
+            overflow: hidden; /* Hide overflow */
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Align items vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            background-image: url('https://static.vecteezy.com/system/resources/previews/014/585/846/original/electric-bulbs-billboard-retro-light-frames-for-text-png.png'); /* Add image as background */
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the image */
         }
 
         h4 {
-            color: #8b4513; /* Matching burnt orange */
+            color: #cf8989; /* White color for h4 text */
             margin: 10px 0;
             font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better readability */
         }
 
+        /* Keyframes for color changing */
+        @keyframes colorChange {
+            0% { color: #ff0000; } /* Red */
+            20% { color: #ff9900; } /* Orange */
+            40% { color: #33cc33; } /* Green */
+            60% { color: #3399ff; } /* Blue */
+            80% { color: #cc00cc; } /* Purple */
+            100% { color: #ff0000; } /* Back to Red */
+        }
+
+        /* Updated h2 style */
         h2 {
             margin: 10px 0;
             font-size: 48px; /* Consistent with menu pages */
-            background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #cc00cc);
-            background-size: 400% 400%;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            animation: gradientAnimation 3s ease infinite; /* Faster animation */
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 0%; }
+            animation: colorChange 1s infinite; /* Apply the color change animation */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better readability */
         }
 
         /* Link to Menu */
         .menu-link {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 20px; /* Adjust margin for spacing */
             padding: 15px 30px;
             background-color: #8b4513; /* Burnt orange button */
             color: #fff9e6; /* Soft paper color text */
@@ -98,7 +127,7 @@
             font-size: 20px;
             border-radius: 10px;
             transition: background-color 0.3s ease, transform 0.1s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .menu-link:hover {
@@ -113,7 +142,7 @@
             background-color: #fff9e6; /* Soft paper color */
             border: 1px solid #8b4513; /* Burnt orange border */
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .contact h3 {
@@ -128,6 +157,12 @@
             color: #3e2723; /* Dark brown text */
         }
 
+        /* Add animation to contact icon */
+        .contact i {
+            font-size: 40px; /* Adjust icon size */
+            animation: colorChange 1.5s infinite; /* Apply the color change animation */
+        }
+
         /* Footer */
         footer {
             margin-top: auto; /* Pushes footer to the bottom */
@@ -140,6 +175,11 @@
 
         /* Responsive adjustments for smaller devices */
         @media (max-width: 600px) {
+            .header {
+                width: 100%; /* Full width on small devices */
+                height: auto; /* Allow height to adjust */
+            }
+
             h4 {
                 font-size: 18px;
             }
@@ -188,23 +228,24 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    
 
     <!-- Header Section -->
     <div class="header">
         <h4>Welcome to</h4>
         <h2>Vijayasri Restaurant</h2>
-
-        <a href="menu.html" class="menu-link" title="View our menu">Click here to check menu</a>
     </div>
+
+    <!-- Menu Link Under Image -->
+    <a href="menu.html" class="menu-link" title="View our menu">Click here to check menu</a>
 
     <!-- Contact Section -->
     <div class="contact" id="contact">
+        <h3><i class="fas fa-user"></i></h3> <!-- User icon above Contact Us -->
+        
         <h3>Contact Us</h3>
-        <p><strong>Phone: 89852 85666</strong></p>
-        <p><strong>Phone: 90000 81813</strong></p>
-        <p><strong>Phone: 99630 44871</strong></p>
+        <p><strong><i class="fas fa-phone"></i> 89852 85666</strong></p>
+        <p><strong><i class="fas fa-phone"></i> 90000 81813</strong></p>
+        <p><strong><i class="fas fa-phone"></i> 99630 44871</strong></p>
     </div>
 
     <!-- Footer -->
