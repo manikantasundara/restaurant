@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            text-align: center;
+            text-align: center; /* Center text alignment */
             color: #3e2723; /* Dark brown text */
         }
 
@@ -34,6 +34,7 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
             position: relative;
             overflow: hidden; /* To contain the shadow effects */
+            text-align: center; /* Center text in h2 */
         }
 
         /* Adding subtle decorative elements */
@@ -70,34 +71,57 @@
             z-index: 1; /* Ensure links are on top of decorative elements */
         }
 
+        /* Image styling */
+        img {
+            width: 60%; /* Make images smaller */
+            max-width: 200px; /* Limit the max width */
+            margin-bottom: 20px; /* Space between image and next item */
+            border-radius: 10px; /* Optional: round image corners */
+            display: block; /* Ensures the image is a block element */
+            margin-left: auto; /* Center the image */
+            margin-right: auto; /* Center the image */
+        }
+
         /* Styling for smaller devices */
         @media (max-width: 600px) {
             h2 {
-                font-size: 20px;
+                font-size: 18px; /* Adjust font size for mobile */
                 width: 90%;
                 padding: 12px 20px;
+            }
+            img {
+                width: 70%; /* Adjust image size for smaller screens */
             }
         }
 
         /* Styling for tablets and medium-sized devices */
         @media (min-width: 601px) and (max-width: 1024px) {
             h2 {
-                font-size: 24px;
+                font-size: 22px; /* Adjust font size for tablets */
                 width: 85%;
                 padding: 14px 25px;
+            }
+            img {
+                width: 65%; /* Adjust image size for medium screens */
             }
         }
     </style>
 </head>
 <body>
     <a href="starters.html">
+        <img src="https://blackstonecaterers.co.uk/wp-content/uploads/2017/11/starters.jpg" alt="Starters">
         <h2>Starter's</h2>
+        
     </a>
     <a href="biryanis.html">
+        <img src="http://mummyrecipes.in/wp-content/uploads/2020/02/biryaniCover-1140x760.jpg" alt="Biryani">
         <h2>Biryani's</h2>
+        
     </a>
     <a href="noodles.html">
+        <img src="https://www.ajinomoto.com.ph/web/wp-content/uploads/2020/07/Stir-Fried-Noodles.jpg" alt="Noodles/Friedrice">
         <h2>Noodles/Friedrice</h2>
+        
     </a>
 </body>
 </html>
