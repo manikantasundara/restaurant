@@ -73,12 +73,12 @@
         .header {
             margin-top: 100px; /* Keep margin for nav bar */
             padding: 0; /* Remove padding to fit the image size exactly */
-            width: 800px; /* Set to match image width */
-            height: 300px; /* Set to match image height */
+            width: 90%; /* Set to match image width responsively */
+            max-width: 800px; /* Set a maximum width for larger screens */
+            height: auto; /* Allow height to adjust */
             background-color: transparent; /* Remove any background color */
             position: relative;
             border-radius: 10px; /* Keep border radius for styling */
-            box-shadow: none; /* Remove box-shadow for no color */
             color: #fff; /* Keep text color white for contrast */
             text-align: center; /* Center text alignment */
             overflow: hidden; /* Hide overflow */
@@ -111,7 +111,7 @@
         /* Updated h2 style */
         h2 {
             margin: 10px 0;
-            font-size: 48px; /* Consistent with menu pages */
+            font-size: 3em; /* Use em for responsive sizing */
             animation: colorChange 1s infinite; /* Apply the color change animation */
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better readability */
         }
@@ -124,7 +124,7 @@
             background-color: #8b4513; /* Burnt orange button */
             color: #fff9e6; /* Soft paper color text */
             text-decoration: none;
-            font-size: 20px;
+            font-size: 1.2em; /* Use em for responsive sizing */
             border-radius: 10px;
             transition: background-color 0.3s ease, transform 0.1s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -143,17 +143,19 @@
             border: 1px solid #8b4513; /* Burnt orange border */
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 90%; /* Responsive width */
+            max-width: 500px; /* Maximum width for larger screens */
         }
 
         .contact h3 {
             margin-bottom: 20px;
             color: #8b4513; /* Burnt orange color */
-            font-size: 28px;
+            font-size: 1.6em; /* Use em for responsive sizing */
         }
 
         .contact p {
             margin: 5px 0;
-            font-size: 18px;
+            font-size: 1.2em; /* Use em for responsive sizing */
             color: #3e2723; /* Dark brown text */
         }
 
@@ -169,7 +171,7 @@
             padding: 20px 0;
             width: 100%;
             text-align: center;
-            font-size: 16px;
+            font-size: 1em; /* Use em for responsive sizing */
             color: #8b4513;
         }
 
@@ -185,7 +187,7 @@
             }
 
             h2 {
-                font-size: 36px;
+                font-size: 30px; /* Reduced size for smaller screens */
             }
 
             .menu-link {
@@ -209,7 +211,7 @@
             }
 
             h2 {
-                font-size: 40px;
+                font-size: 40px; /* Slightly reduced for better scaling */
             }
 
             .menu-link {
@@ -230,7 +232,6 @@
 <body>
 
     
-
     <!-- Header Section -->
     <div class="header">
         <h4>Welcome to</h4>
@@ -252,10 +253,7 @@
     <!-- Footer -->
     <footer>
         &copy; Thank you for visiting ... Visit again! 
-        <div>
-            <a href="https://www.facebook.com" target="_blank" style="margin-right: 10px; color: #8b4513;">Facebook</a>
-            <a href="https://www.instagram.com" target="_blank" style="color: #8b4513;">Instagram</a>
-        </div>
+        
     </footer>
 </body>
 </html>
