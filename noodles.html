@@ -5,190 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noodles/Friedrice Menu</title>
     <style>
-        /* Styling the body */
         body {
-            background-color: #f9f2e7; /* Old paper background */
-            font-family: 'Georgia', serif; /* Vintage serif font */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
             margin: 0;
             padding: 20px;
-            color: #3e2723; /* Dark brown text */
+            color: #3e2723;
         }
 
-        /* Styling for the menu title */
-        h2 {
+        .heading {
             text-align: center;
-            color: #8b4513; /* Burnt orange */
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            text-shadow: 2px 2px 0 #fce4d6;
-            border-bottom: 3px solid #8b4513; /* Decorative underline */
-            padding-bottom: 10px;
-        }
-
-        /* Styling the menu container */
-        .menu {
-            font-size: 22px;
-            line-height: 2;
-            padding: 25px;
-            background-color: #fff9e6; /* Soft paper color */
-            border: 5px solid #8b4513;
-            border-radius: 20px;
-            width: 80%;
-            max-width: 700px;
-            margin: 20px auto; /* Center the menu */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Adding subtle decorative elements */
-        .menu::before, .menu::after {
-            content: '';
-            position: absolute;
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            background: rgba(139, 69, 19, 0.2);
-            z-index: 0;
-        }
-
-        .menu::before {
-            top: -50px;
-            left: -50px;
-        }
-
-        .menu::after {
-            bottom: -50px;
-            right: -50px;
-        }
-
-        /* Styling for each menu item */
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px dashed #8b4513;
-            z-index: 1;
-        }
-
-        /* Last menu item has no border */
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-
-        /* Styling for the item name */
-        .menu-item span:first-child {
-            font-weight: bold;
-            color: #3e2723; /* Deep brown for item name */
-            font-style: italic;
-        }
-
-        /* Styling for the item price */
-        .menu-item span:last-child {
             color: #8b4513;
+            font-size: 32px;
+            margin: 20px 0;
             font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0 #fce4d6;
         }
 
-        /* Hover effects for interactive feel */
-        .menu-item:hover {
-            color: #d2691e; /* Burnt orange hover effect */
-            transition: color 0.3s ease;
+        .note {
+            font-size: 20px;
+            color: #8b0000;
+            margin: 10px 0;
+            text-align: center;
+            font-style: italic;
+            animation: colorChange 2s infinite alternate;
         }
 
-        .menu-item:hover span:last-child {
-            text-decoration: underline;
+        @keyframes colorChange {
+            0% { color: darkred; }
+            25% { color: #8B0000; }
+            50% { color: #FF6347; }
+            75% { color: #CD5C5C; }
+            100% { color: darkred; }
         }
 
-        /* Responsive styles for mobile screens */
-        @media (max-width: 600px) {
-            h2 {
-                font-size: 36px;
-            }
-
-            .menu {
-                font-size: 18px;
-            }
+        /* For the menu items: 2 columns layout */
+        .menu-item {
+            text-align: center;
+            border: 1px solid #8b4513;
+            border-radius: 10px;
+            padding: 10px;
+            width: calc(50% - 20px); /* Adjusted width for margin */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px; /* Margin for spacing */
+            display: inline-block; /* Aligns items side by side */
+            vertical-align: top; /* Ensures items align properly */
         }
 
-        /* Responsive styles for tablets */
-        @media (min-width: 601px) and (max-width: 1024px) {
-            h2 {
-                font-size: 40px;
-            }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
 
-            .menu {
-                font-size: 20px;
-            }
+        .item-name {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .item-price {
+            font-size: 16px;
+            color: #8b4513;
         }
     </style>
 </head>
 <body>
-    <h2>Noodles/Friedrice</h2>
-    
-    <div class="menu">
-        <div class="menu-item">
-            <span>Chicken Noodles</span>
-            <span>₹110</span>
-        </div>
-        <div class="menu-item">
-            <span>Chicken Fried Rice Sona</span>
-            <span>₹110</span>
-        </div>
-        <div class="menu-item">
-            <span>Egg Fried Rice</span>
-            <span>₹90</span>
-        </div>
-        <div class="menu-item">
-            <span>Mughalai Fried Rice Mini</span>
-            <span>₹150</span>
-        </div>
-        <div class="menu-item">
-            <span>Mughalai Fried Rice Full</span>
-            <span>₹250</span>
-        </div>
-        <div class="menu-item">
-            <span>Mixed Fried Rice</span>
-            <span>₹380</span>
-        </div>
-        <div class="menu-item">
-            <span>SP Mutton Fried Rice</span>
-            <span>₹380</span>
-        </div>
-        <div class="menu-item">
-            <span>SP Chicken Fried Rice</span>
-            <span>₹280</span>
-        </div>
-        <div class="menu-item">
-            <span>Egg Fried Rice Basmati</span>
-            <span>₹160</span>
-        </div>
-        <div class="menu-item">
-            <span>SP Prawns Fried Rice</span>
-            <span>₹380</span>
-        </div>
-        <div class="menu-item">
-            <span>Prawns Mixed Fried Rice</span>
-            <span>₹320</span>
-        </div>
+
+    <div class="note">Explore our delicious noodles and fried rice!</div>
+
+    <h2 class="heading">Noodles/Friedrice</h2>
+    <!-- Color-changing notes below the heading -->
+    <div class="note">Note: Every item will be made on our restaurant style...!</div>
+    <div class="note">Note: Images are placed here just for understanding the item...!</div>
+
+    <!-- Menu items arranged 2 per row -->
+    <div class="menu-item">
+        <img src="https://i.ytimg.com/vi/lumjG47pfOc/maxresdefault.jpg" alt="Chicken Noodles">
+        <span class="item-name">Chicken Noodles</span>
+        <span class="item-price">₹110</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://www.allchickenrecipes.com/wp-content/uploads/2018/11/Chicken-Fried-Rice.jpg" alt="Chicken Fried Rice Sona">
+        <span class="item-name">Chicken Fried Rice Sona</span>
+        <span class="item-price">₹110</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://www.carolinescooking.com/wp-content/uploads/2016/01/vegetable-egg-fried-rice-photo-1.jpg" alt="Egg Fried Rice">
+        <span class="item-name">Egg Fried Rice</span>
+        <span class="item-price">₹90</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.qx7195frTQJgeOpdfXa-8QAAAA&pid=Api&P=0&h=180" alt="Mughalai Fried Rice Mini">
+        <span class="item-name">Mughalai Fried Rice Mini</span>
+        <span class="item-price">₹150</span>
+    </div>
+    <div class="menu-item">
+        <img src="http://3.bp.blogspot.com/-fhxmUOyMAZ4/Ux-Kcbo34SI/AAAAAAAAKog/-wVtv_JMb9k/s1600/DSC_1396.JPG" alt="Mughalai Fried Rice Full">
+        <span class="item-name">Mughalai Fried Rice Full</span>
+        <span class="item-price">₹250</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.ytimg.com/vi/iIvz3PtV6_8/maxresdefault.jpg" alt="Mixed Fried Rice">
+        <span class="item-name">Mixed Fried Rice</span>
+        <span class="item-price">₹380</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.ytimg.com/vi/6XSN_Hc6gk8/maxresdefault.jpg" alt="SP Mutton Fried Rice">
+        <span class="item-name">SP Mutton Fried Rice</span>
+        <span class="item-price">₹380</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://i1.wp.com/www.indianrecipeinfo.com/wp-content/uploads/2020/11/Chicken-Fried-Rice-Recipe-Restaurant-Style.jpg?fit=1024%2C576&ssl=1" alt="SP Chicken Fried Rice">
+        <span class="item-name">SP Chicken Fried Rice</span>
+        <span class="item-price">₹280</span>
+    </div>
+    <div class="menu-item">
+        <img src="http://1.bp.blogspot.com/-iEej2knyvHM/UjDR1zy-kjI/AAAAAAAAC6o/A_K_6YrwbX8/s1600/How+to+make+egg+fried+rice+easy.JPG" alt="Egg Fried Rice Basmati">
+        <span class="item-name">Egg Fried Rice Basmati</span>
+        <span class="item-price">₹160</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.ytimg.com/vi/cwu2SQ3GOWE/maxresdefault.jpg" alt="SP Prawns Fried Rice">
+        <span class="item-name">SP Prawns Fried Rice</span>
+        <span class="item-price">₹380</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://mymorningmocha.com/wp-content/uploads/2021/11/Prawn-fried-rice-in-round-bowl.jpg" alt="Prawns Mixed Fried Rice">
+        <span class="item-name">Prawns Mixed Fried Rice</span>
+        <span class="item-price">₹320</span>
     </div>
 
-    <h2>Veg Fried Rice</h2>   
-    
-    <div class="menu">   
-        <div class="menu-item">
-            <span>Veg Fried Rice</span>
-            <span>₹140</span>
-        </div>
-        <div class="menu-item">
-            <span>SP Veg Fried Rice With Paneer Curry</span>
-            <span>₹300</span>
-        </div>
-        <div class="menu-item">
-            <span>Veg Fried Rice With Kaju Tomato Curry</span>
-            <span>₹280</span>
-        </div>
+    <h2 class="heading">Veg Fried Rice</h2>
+
+    <div class="menu-item">
+        <img src="https://recipesofhome.com/wp-content/uploads/2020/06/veg-fried-rice-recipe.jpg" alt="Veg Fried Rice">
+        <span class="item-name">Veg Fried Rice</span>
+        <span class="item-price">₹140</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2015/03/1-10.jpg" alt="SP Veg Fried Rice With Paneer Curry">
+        <span class="item-name">SP Veg Fried Rice With Paneer Curry</span>
+        <span class="item-price">₹300</span>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.ytimg.com/vi/rhgo0cco_yI/maxresdefault.jpg" alt="Veg Fried Rice With Kaju Tomato Curry">
+        <span class="item-name">Veg Fried Rice With Kaju Tomato Curry</span>
+        <span class="item-price">₹280</span>
     </div>
 
 </body>
