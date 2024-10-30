@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vijayasri Restaurant - Diwali Special</title>
+    <title>Vijayasri Restaurant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Base styles for the body */
@@ -23,25 +23,17 @@
             position: relative;
         }
 
-        /* Top Footer Content */
+        /* Top Footer Content (as header) */
         .top-footer {
             width: 100%;
-            background: linear-gradient(90deg, #8b4513, #ff8c00, #ffd700); /* Multi-color gradient */
-            color: #ffffff;
+            background-color: #8b4513;
+            color: #ffd700;
             text-align: center;
             padding: 10px 0;
             font-size: 1em;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             position: absolute;
-            top: 0;
-            animation: colorChange 3s infinite; /* Animation for text color */
-        }
-
-        /* Animation for top footer and footer text */
-        @keyframes colorChange {
-            0% { color: #ffd700; }
-            50% { color: #ffffff; }
-            100% { color: #ffd700; }
+            top: 0; /* Positioned at the top */
         }
 
         /* Header Section */
@@ -58,7 +50,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-image: url('https://i.imgur.com/9NuBvS5.png'); /* Diwali lights */
+            
             background-size: cover;
             background-position: center center;
         }
@@ -146,7 +138,6 @@
             text-align: center;
             font-size: 1em;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            animation: colorChange 3s infinite; /* Same text color animation */
         }
 
         /* Animation for the glowing diya icon */
