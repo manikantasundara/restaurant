@@ -4,78 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vijayasri Restaurant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
     <style>
         /* Base styles for the body */
         html, body {
-            margin: 0;
-            padding: 0;
+            margin: 0; /* Remove default margin from body */
+            padding: 0; /* Remove default padding from body */
             box-sizing: border-box;
-            background: linear-gradient(135deg, #ffefba, #ffc3a0); /* Warm golden gradient */
-            font-family: 'Georgia', serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            min-height: 100vh;
-            color: #3e2723;
-            text-align: center;
-            position: relative;
         }
 
-        /* Top Footer Content (as header) */
-        .top-footer {
-            width: 100%;
-            background-color: #8b4513;
-            color: #ffd700;
+        body {
+            background: linear-gradient(135deg, #C0C0C0, #f5ebeb); /* Silver gradient */
+            font-family: 'Georgia', serif; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the top */
+            align-items: center;
+            min-height: 100vh;
+            color: #3e2723; /* Change text color for contrast */
             text-align: center;
-            padding: 10px 0;
-            font-size: 1em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0; /* Positioned at the top */
         }
 
         /* Header Section */
         .header {
-            margin-top: 60px; /* Added margin to push content down */
-            width: 90%;
-            max-width: 800px;
-            height: 400px;
+            margin: 0; 
+            width: 100%; /* Change width to 100% to make it responsive */
+            max-width: 100%; /* Ensure it spans the full width */
+            height: 400px; /* Set a fixed height */
+            background-color: transparent; 
             position: relative;
             border-radius: 10px;
-            text-align: center;
+            color: #fff; 
+            text-align: center; 
             overflow: hidden;
-            display: flex;
+            display: flex; 
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
-            background-size: cover;
-            background-position: center center;
+            background-image: url('https://png.pngtree.com/png-clipart/20220901/ourmid/pngtree-rectangle-retro-lightbox-billboard-vintage-frame-sign-board-png-image_6133758.png');
+            background-size: cover; /* Ensures the image covers the area without distortion */
+            background-position: center center; /* Center the image */
         }
 
         h4 {
-            color: #ff8c00;
+            color: #cf8989; 
             margin: 10px 0;
             font-size: 24px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         h2 {
-            margin: 10px 0 0 0; /* Removed bottom margin */
-            font-size: 3em;
-            color: #ffd700; /* Golden color */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin: 10px 0;
+            font-size: 3em; 
+            animation: colorChange 1s infinite; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+        }
+
+        /* Color-changing text */
+        @keyframes colorChange {
+            0% { color: #ff0000; }
+            20% { color: #ff9900; }
+            40% { color: #33cc33; }
+            60% { color: #3399ff; }
+            80% { color: #cc00cc; }
+            100% { color: #ff0000; }
         }
 
         /* Menu Button */
         .menu-link {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 10px; /* Reduced margin to minimize space */
             padding: 15px 30px;
-            background-color: #d2691e;
-            color: #fff;
+            background-color: #8b4513; /* Rich brown color for the button */
+            color: #fff9e6; 
             text-decoration: none;
             font-size: 1.2em;
             border-radius: 10px;
@@ -84,73 +85,26 @@
         }
 
         .menu-link:hover {
-            background-color: #b35709;
+            background-color: #a0522d;
             transform: scale(1.05);
-        }
-
-        /* Diya icon styles */
-        .diya {
-            display: inline-block;
-            font-size: 2em;
-            color: #ff4500;
-            margin-top: 20px;
-            animation: glow 2s infinite;
-        }
-
-        /* Small Diwali lamp images in corners */
-        .corner-lamp {
-            position: absolute;
-            width: 50px; /* Small size */
-            height: auto;
-        }
-
-        .lamp-left-bottom {
-            bottom: 0;
-            left: 0;
-            margin: 10px;
-        }
-
-        .lamp-right-bottom {
-            bottom: 0;
-            right: 0;
-            margin: 10px;
-        }
-
-        .lamp-left-top {
-            top: 60px; /* Adjusted to avoid overlap with top content */
-            left: 0;
-            margin: 10px;
-        }
-
-        .lamp-right-top {
-            top: 60px; /* Adjusted to avoid overlap with top content */
-            right: 0;
-            margin: 10px;
         }
 
         /* Footer */
         footer {
-            margin-top: auto;
+            margin-top: auto; 
             padding: 20px 0;
             width: 100%;
-            background: linear-gradient(90deg, #8b4513, #ff8c00, #ffd700); /* Multi-color gradient */
-            color: #ffffff;
             text-align: center;
             font-size: 1em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Animation for the glowing diya icon */
-        @keyframes glow {
-            0% { color: #ff4500; }
-            50% { color: #ffd700; }
-            100% { color: #ff4500; }
+            animation: colorChange 1s infinite; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+            color: red; /* White text for contrast */
         }
 
         /* Responsive adjustments for smaller devices */
         @media (max-width: 600px) {
             .header {
-                width: 100%;
+                width: 100%; 
             }
 
             h4 {
@@ -165,6 +119,12 @@
                 font-size: 16px;
                 padding: 10px 20px;
             }
+
+            /* Adjust image for mobile */
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         /* Responsive adjustments for tablets */
@@ -174,7 +134,7 @@
             }
 
             h2 {
-                font-size: 40px;
+                font-size: 40px; 
             }
 
             .menu-link {
@@ -182,47 +142,39 @@
                 padding: 12px 25px;
             }
         }
+
+        /* Image at the top */
+        img {
+            width: 100%; /* Adjust the image to cover the width of the screen */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Make sure it's a block element */
+            margin: 0; /* Remove margin */
+        }
     </style>
 </head>
 <body>
 
-    <!-- Top Footer Content -->
-    <div class="top-footer">
-        Tnq for visiting...Happy Diwali...
-    </div>
+    <!-- Image at the top -->
+    <img src="https://freepngimg.com/download/2025/178367-happy-new-year-2025-skyline-fireworks.png" alt="Vijayasri Restaurant Image">
 
-    
+    <!-- Header Section -->
     <div class="header">
         <h4>Welcome to</h4>
         <h2>Vijayasri Restaurant</h2>
     </div>
 
     <!-- Menu Link -->
-    <a href="menu.html" class="menu-link" title="View our menu">Click here to check our Diwali Specials!</a>
-
-    <!-- Diya Icon -->
-    <div class="diya">
-        <i class="fas fa-fire"></i>
-    </div>
-    
-
-    <!-- Diwali Lamps in corners -->
-    <img src="http://www.freepngclipart.com/download/light/45048-golden-oil-ezhamkulam-light-diwali-lamp-shining.png" alt="Diwali Lamp" class="corner-lamp lamp-left-bottom">
-    <img src="http://www.freepngclipart.com/download/light/45048-golden-oil-ezhamkulam-light-diwali-lamp-shining.png" alt="Diwali Lamp" class="corner-lamp lamp-right-bottom">
-    <img src="http://www.freepngclipart.com/download/light/45048-golden-oil-ezhamkulam-light-diwali-lamp-shining.png" alt="Diwali Lamp" class="corner-lamp lamp-left-top">
-    <img src="http://www.freepngclipart.com/download/light/45048-golden-oil-ezhamkulam-light-diwali-lamp-shining.png" alt="Diwali Lamp" class="corner-lamp lamp-right-top">
+    <a href="menu.html" class="menu-link" title="View our menu">Click here to check menu</a>
 
     <!-- Contact Info -->
-    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-        Contact us
-    </p>
+    <img src="http://www.pngplay.com/wp-content/uploads/1/Contact-Us-PNG-Download-Free-Image.png" alt="Contact Us" style="width: 100%; max-width: 200px; display: block; margin-top: 0;"> 
     <p><strong><i class="fas fa-phone"></i> 89852 85666</strong></p>
     <p><strong><i class="fas fa-phone"></i> 90000 81813</strong></p>
     <p><strong><i class="fas fa-phone"></i> 99630 44871</strong></p>
 
     <!-- Footer -->
     <footer>
-        &copy; Thank you for visiting ...
+        &copy; Thank you for visiting ... Visit again! 
     </footer>
 
 </body>
